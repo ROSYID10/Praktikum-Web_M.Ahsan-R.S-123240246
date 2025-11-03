@@ -40,7 +40,7 @@
             <td>
                 <a href="detail.php?id=<?php echo $data['id']; ?>">detail</a>
                 <a href="editdata.php?id=<?php echo $data['id']; ?>">Edit</a>
-                <a href="php/hapus.php?id=<?php echo $data['id']; ?>">hapus</a>
+                <a href="hapus.php?id=<?php echo $data['id']; ?>">hapus</a>
             </td>
         </tr>
         <?php }

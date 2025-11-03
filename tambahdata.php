@@ -9,7 +9,7 @@
     <h1 align="center">BIMBEL BABARSARI</h1>
 
 
-    <form action="php/prosestambahdata.php" method="POST">
+    <form action="prosestambahdata.php" method="POST">
         <label>Nama : </label><br>
         <input type="text" name="nama" required>
         <br><br>

@@ -55,7 +55,7 @@
 
     //handling
     if ($query){
-        header('Location: ../index.php?status=berhasil_login');
+        header('Location: index.php?status=berhasil_login');
     }else{
         echo "gagal CUYY";
     }

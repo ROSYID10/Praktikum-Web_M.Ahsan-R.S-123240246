@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
     $query = mysqli_query($koneksi, $sql);
 
     if ($query) {
-        header('Location: ../index.php');
+        header('Location: index.php');
     } else {
         die("Gagal menghapus data: " . mysqli_error($koneksi));
     }
