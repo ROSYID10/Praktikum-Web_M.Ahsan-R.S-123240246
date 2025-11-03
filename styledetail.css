@@ -1,0 +1,89 @@
+
+:root{
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --muted: #64748b;
+  --text: #0f1724;
+  --accent: #7c3aed;
+  --accent-600: #5b21b6;
+  --surface-border: rgba(15,23,42,0.06);
+  --radius: 12px;
+  --container: 980px;
+  --gap: 1rem;
+  --ff: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--ff);
+  background:linear-gradient(180deg,var(--bg),#eef2ff);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:2rem 1rem;
+}
+
+.container{max-width:var(--container);margin:0 auto}
+
+/* Main card */
+.detail-card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:1.25rem;
+  box-shadow:0 12px 40px rgba(2,6,23,0.06);
+  border:1px solid var(--surface-border);
+}
+
+.page-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.page-title h1{font-size:1.5rem;margin:0}
+.page-title a.back{color:var(--accent);text-decoration:none;font-weight:700}
+.page-title a.back:hover{color:var(--accent-600);text-decoration:underline}
+
+/* If your PHP prints <tr> and <td> without a table, style them gracefully */
+tr, td{display:block}
+tr{margin-bottom:.6rem}
+td{padding:.35rem 0}
+
+/* Key-value layout — prefer using .kv if you can wrap server output */
+.kv{display:grid;grid-template-columns:220px 1fr;gap:.6rem;align-items:start}
+.kv .key{font-weight:700;color:var(--muted)}
+.kv .val{color:var(--text)}
+
+/* Breakdown box for price components */
+.breakdown{margin-top:1rem;padding:1rem;border-radius:10px;background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid rgba(15,23,42,0.03)}
+.breakdown h3{margin:0 0 .6rem 0;font-size:1rem}
+.breakdown .line{display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px dashed rgba(15,23,42,0.04)}
+.breakdown .line:last-child{border-bottom:none}
+.breakdown .total{font-weight:900;font-size:1.15rem;padding-top:.6rem}
+.breakdown .muted{color:var(--muted)}
+
+/* Action area */
+.actions{display:flex;gap:.6rem;margin-top:1rem;flex-wrap:wrap}
+.btn{padding:.55rem .9rem;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-600));color:white;box-shadow:0 10px 30px rgba(124,58,237,0.12)}
+.btn-ghost{background:transparent;border:1px solid var(--surface-border);color:var(--muted)}
+.btn-link{background:transparent;color:var(--accent);border:0;text-decoration:underline;padding:0}
+
+/* Small note / catatan */
+.note{margin-top:1rem;padding:.75rem;border-radius:8px;background:#fbfdff;border:1px solid rgba(15,23,42,0.03);color:var(--muted)}
+
+/* Responsive */
+@media (max-width:720px){
+  .kv{grid-template-columns:140px 1fr}
+  :root{--container:100%}
+}
+
+/* Print */
+@media print{
+  body{padding:0;background:white;color:black}
+  .actions,.page-title a.back{display:none}
+  .detail-card{box-shadow:none;border:0}
+}
+
+/* Helpful utilities */
+.text-muted{color:var(--muted)}
+.small{font-size: nine rem}
+
+/* End of styletambah.css */

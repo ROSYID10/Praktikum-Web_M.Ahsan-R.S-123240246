@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>BIMBEM BABARSARI</title>
-    <link rel="stylesheet" href="css/styletambah.css">
+    <link rel="stylesheet" href="styletambah.css">
 </head>
 <body>
 

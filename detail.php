@@ -1,5 +1,5 @@
 <?php 
-include 'php/koneksi.php';
+include 'koneksi.php';
 $data = null;
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Pendaftaran</title>
-    <link rel="stylesheet" href="css/styledetail.css">
+    <link rel="stylesheet" href="styledetail.css">
 </head>
 <body>
     <div class="container">

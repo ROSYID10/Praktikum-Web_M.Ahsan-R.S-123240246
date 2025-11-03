@@ -1,5 +1,5 @@
 <?php 
-    include 'php/koneksi.php';
+    include 'koneksi.php';
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DATA PENDAFTARAN BIMBEL</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>DATA PENDAFTARAN BIMBEL</h1>

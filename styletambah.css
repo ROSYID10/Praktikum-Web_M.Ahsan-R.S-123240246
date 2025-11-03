@@ -1,0 +1,115 @@
+
+:root{
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --accent: #2563eb; /* blue */
+  --accent-600: #1e40af;
+  --muted: #6b7280;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --radius: 10px;
+  --container: 920px;
+  --gap: 1rem;
+  --ff: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    
+  margin:0;
+  font-family:var(--ff);
+  background:linear-gradient(180deg,var(--bg),#eef3fb);
+  color:#0f1724;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:2.5rem 1rem;
+}
+
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+}
+
+/* Page header */
+h1{
+  font-size:1.75rem;
+  margin:0 0 .5rem 0;
+  letter-spacing:-0.01em;
+}
+a.back-link{
+  display:inline-block;
+  color:var(--accent);
+  text-decoration:none;
+  margin-top:.5rem;
+}
+a.back-link:hover{color:var(--accent-600);text-decoration:underline}
+
+/* Form card */
+form{
+  margin-top:1rem;
+  background:var(--card);
+  border-radius:12px;
+  padding:1.25rem;
+  box-shadow:0 8px 30px rgba(16,24,40,0.06);
+  border:1px solid rgba(15,23,42,0.04);
+}
+
+label{display:block;font-weight:600;margin-bottom:.35rem}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea{
+  width:100%;
+  padding:.65rem .75rem;
+  border-radius:8px;
+  border:1px solid rgba(15,23,42,0.08);
+  background:transparent;
+  font-size:1rem;
+  color:inherit;
+}
+
+textarea{min-height:110px;resize:vertical}
+
+/* Radios & checkboxes group */
+.option-group{display:flex;flex-direction:column;gap:.45rem;margin-bottom:.6rem}
+.option-inline{display:flex;align-items:center;gap:.5rem}
+.option-inline input{transform:scale(1.02)}
+
+/* Select styling */
+select{appearance:none;background-image:linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);background-position:calc(100% - 1rem) calc(1rem + 2px), calc(100% - .75rem) calc(1rem + 2px);background-size:.45rem .45rem, .45rem .45rem;background-repeat:no-repeat;padding-right:2.4rem}
+
+/* Buttons */
+.form-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+button{font-weight:700;padding:.55rem .9rem;border-radius:10px;border:0;cursor:pointer}
+button[type="reset"]{background:#eef2ff;color:var(--accent-600);border:1px solid rgba(37,99,235,0.06)}
+button[type="submit"]{background:linear-gradient(90deg,var(--accent),var(--accent-600));color:white;box-shadow:0 10px 30px rgba(37,99,235,0.12)}
+button[disabled]{opacity:.6;cursor:not-allowed}
+
+/* Plain button used as link */
+.btn-link{background:transparent;color:var(--muted);padding:.35rem .6rem;border-radius:8px;border:1px solid rgba(15,23,42,0.03)}
+
+/* Small helper text */
+.small{font-size:nine rem;color:var(--muted)}
+
+/* Responsive */
+@media (min-width:720px){
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+}
+@media (max-width:720px){
+  body{padding:1rem}
+}
+
+/* Focus and accessibility */
+:focus{outline:3px solid rgba(37,99,235,0.12);outline-offset:2px}
+
+/* Table / summary area (if needed later) */
+.summary{margin-top:1rem;padding:1rem;border-radius:8px;background:#fbfdff;border:1px solid rgba(15,23,42,0.03)}
+
+/* Tiny layout tweaks for form elements that include pipe-delimited values */
+/* If you parse values server-side, display breakdown using this class */
+.kv{display:flex;gap:.5rem;flex-wrap:wrap}
+.kv .item{background:rgba(37,99,235,0.06);padding:.25rem .5rem;border-radius:999px;font-weight:700;color:var(--accent-600)}
+
+/* End of stylesheet */
